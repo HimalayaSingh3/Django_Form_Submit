@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 ">
+      <div class="card my-5">
+        <form class="card-body cardbody-color p-lg-5" method="post">
+          {% csrf_token %}
+          <div class="text-center mb-4">
+            <h2>Form Details</h2>
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="username" name="uname" placeholder="Name" />
+          </div>
+
+          <div class="mb-3">
+            <label for="gender">Select Gender:</label>
+            <select name="gender" id="gender" class="form-control">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <input type="number" class="form-control" id="age" name="age" placeholder="Age" />
+          </div>
+
+          <div class="mb-3">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+          </div>
+
+          <div class="mb-3">
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone No" />
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="city" name="city" placeholder="City" />
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="state" name="state" placeholder="State" />
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Pin Code" />
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="country" name="country" placeholder="Country" />
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="experience" name="experience" placeholder="Experience" />
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="skills" name="skills" placeholder="Skills" />
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="education" name="education" placeholder="Education" />
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" id="message" name="message" placeholder="Message for Us?"></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-dark w-100">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
